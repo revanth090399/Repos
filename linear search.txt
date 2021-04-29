@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int list[] = { 2,5,-7,-9,1,6,3,-8,-4};
+    int n = 9;
+    int found = 0; //since the item is still not found it is declared as 0.
+    int i = 0; // 'i' is the index at which the item is stored and array index starts with 0, and hence 'i' is declared as 0.
+    int item;
+    printf("Enter the item you want to search : \n");
+    scanf("%d", &item);
+    while(!found && i<n) {   //since found =0 , '!found' will become '1' and hence becomes ture which helps in executing the below statements.
+        if(item == list[i]) { //the item is compared with the elements present in array "list" by incrementing the index value 'i' if item not found.
+            found = 1;
+        }
+        else {
+            i++;
+        }
+            
+    }
+    if(found) {
+        printf("%d is the item located in the position %d",item ,i);
+    }
+    else {
+        printf("the item %d is not found",item);
+    }
+    
+}
